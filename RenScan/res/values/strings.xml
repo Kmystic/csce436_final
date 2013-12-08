@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">RenScan</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Welcome!</string>
     <string name="menu_settings">Settings</string>
+    <string name="purchase_text">Purchase</string>
+    <string name="new_item_text">New Item</string>
+    <string name="inventory_text">Inventory</string>
 
 </resources>
