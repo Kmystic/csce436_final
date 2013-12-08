@@ -5,8 +5,12 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <permission></permission> -->
 
     <application
         android:allowBackup="true"
@@ -21,6 +25,24 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.renscan.NewItemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_new_item"
+            android:parentActivityName="com.example.renscan.Welcome"
+            android:theme="@style/FullscreenTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.renscan.Welcome" />
+        </activity>
+        <activity
+            android:name="com.example.renscan.ScanActivity"
+            android:label="@string/title_activity_scan"
+            android:parentActivityName="com.example.renscan.Welcome" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.renscan.Welcome" />
         </activity>
     </application>
 
