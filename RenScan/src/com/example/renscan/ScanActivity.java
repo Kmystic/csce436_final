@@ -35,7 +35,7 @@ public class ScanActivity extends Activity {
     private Uri fileUri; // file url to store image/video
     
     private ImageView imgPreview;
-    private Button btnCapturePicture;
+    private Button btnCapturePicture, btnConfirmPicture;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,8 @@ public class ScanActivity extends Activity {
  
         imgPreview = (ImageView) findViewById(R.id.imgPreview);
         btnCapturePicture = (Button) findViewById(R.id.btnCapturePicture);
+        btnConfirmPicture = (Button) findViewById(R.id.btnConfirmPicture);
+        btnConfirmPicture.setVisibility(View.INVISIBLE);
  
         /**
          * Capture image button click event
@@ -127,6 +129,7 @@ public class ScanActivity extends Activity {
 	            // successfully captured the image
 	            // display it in image view
 	            previewCapturedImage();
+	            btnConfirmPicture.setVisibility(View.VISIBLE);
 	        } else if (resultCode == RESULT_CANCELED) {
 	            // user cancelled Image capture
 	            Toast.makeText(getApplicationContext(),
@@ -227,6 +230,12 @@ public class ScanActivity extends Activity {
         }
      
         return mediaFile;
+    }
+    
+    public void startNewItemActivity(View view) {
+    	Intent intent = new Intent(this, NewItemActivity.class);
+    	intent.putExtra("imagePath", fileUri.getPath());
+    	startActivity(intent);
     }
 
 }

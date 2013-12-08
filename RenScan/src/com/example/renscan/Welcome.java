@@ -26,4 +26,9 @@ public class Welcome extends Activity {
     	startActivity(intent);
     }
     
+    public void startInventoryActivity(View view) {
+    	Intent intent = new Intent(this, InventoryActivity.class);
+    	startActivity(intent);
+    }
+    
 }
