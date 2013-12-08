@@ -2,41 +2,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_overlay"
     tools:context=".ScanActivity" >
-    
-        
-    <!-- Capture picture button -->
     
     <!-- To display picture taken -->
         <ImageView
             android:id="@+id/imgPreview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btnCapturePicture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/surfaceView1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="33dp"
-            android:text="Take a Picture" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/btnCapturePicture"
             android:padding="10dp"
             android:text="Preview"
             android:textSize="15sp" />
 
-        <SurfaceView
-            android:id="@+id/surfaceView1"
+    <!-- Capture picture button -->
+        <Button
+            android:id="@+id/btnCapturePicture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Take a Picture" />
 
 </RelativeLayout>
