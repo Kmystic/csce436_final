@@ -15,6 +15,7 @@
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
+       <item name="android:windowBackground"> @drawable/old_paper </item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
@@ -33,6 +34,12 @@
         <item name="android:windowBackground">@null</item>
         <item name="buttonBarStyle">@style/ButtonBar</item>
         <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+    
+    <style name="MyCustomSpinner" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/paper_button</item>
+        <item name="android:textSize">30px</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>

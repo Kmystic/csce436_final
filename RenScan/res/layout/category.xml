@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/old_paper"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/candle" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        style="@style/MyCustomSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:entries="@array/qnty_array"
+        android:prompt="@string/qnty_prompt" 
+        android:paddingBottom="5dp" 
+    	android:paddingTop="5dp"/>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        style="@style/MyCustomSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:entries="@array/price_array"
+        android:prompt="@string/price_prompt" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        style="@style/MyCustomSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:entries="@array/type_array"
+        android:prompt="@string/type_prompt" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        style="@style/MyCustomSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:entries="@array/color_array"
+        android:prompt="@string/color_prompt"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/AppBaseTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Sumbit" />
+    
+
+</LinearLayout>

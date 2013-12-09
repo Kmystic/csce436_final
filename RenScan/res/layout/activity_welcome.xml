@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Welcome" >
+    tools:context=".Welcome" 
+    android:background="@drawable/old_paper">
 
     <Button
         android:id="@+id/button2"
@@ -10,7 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:text="@string/purchase_text" />
+        android:text="@string/purchase_text" 
+   		/>
 
     <Button
         android:id="@+id/button3"
@@ -18,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:text="@string/inventory_text" />
+        android:text="@string/inventory_text" 
+        android:onClick="startNewItemActivity"/>
 
     <TextView
         android:id="@+id/textView1"
